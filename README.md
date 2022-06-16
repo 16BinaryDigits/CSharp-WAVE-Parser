@@ -1,9 +1,10 @@
-# CSharp "C#" WAVE Parser:
+# CSharp "C#" WAVE ".wav" File Parser:
 
-Parses the audio data and the format chunck info from a WAVE-Format audio file ".wav".
+Parses the audio data and the format chunk info from a WAVE-Format audio file ".wav".
 
-To use simply add the "WAVE" class to your project then initialize an object of that class,
-the object constructor take one string parameter which is the path to the audio file ".wav".
+To use, simply add the "WAVE" class to your project, then initialize an object of that class.
+
+The object constructor takes one string parameter, which is the path to the audio file ".wav".
 
 The Wave class exposes the following properties:
 
