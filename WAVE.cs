@@ -72,7 +72,7 @@ public class WAVE
     public int BlockAlign { get; private set; }
     public int BitsPerSample { get; private set; }
     public int DataLength { get; private set; }
-    public byte[] Bytes { get; private set; }
+    public byte[] Data { get; private set; }
 
     public WAVE(string pathToWaveFile)
     {
@@ -133,8 +133,8 @@ public class WAVE
         DataLength = BinaryPrimitives.ReadInt32LittleEndian(bytes.Slice(40, 44));
 
         // Data //
-        ReadOnlySpan<byte> data = bytes.Slice(44, DataLength);
-        Bytes = data.ToArray();
+        ReadOnlySpan<byte> audioData = bytes.Slice(44, DataLength);
+        Data = audioData.ToArray();
     }
 }
 
